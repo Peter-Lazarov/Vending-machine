@@ -1,6 +1,7 @@
 const express = require('express');
 const server = express();
 const port = 3000;
+const cors = require('cors');
 
 server.use(express.json());
 
@@ -11,6 +12,11 @@ const products = [
     { id: 4, name: 'Juice', quantity: "5", price: 4.8},
     { id: 5, name: 'Tea', quantity: "15", price: 2.2}
 ]
+
+server.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true
+  }));
 
 server.get('/products', (request, response) => {
     response.json(products);

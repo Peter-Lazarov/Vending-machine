@@ -1,42 +1,91 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html {
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+    border: none;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playwrite PE";
+    /* font-family: Georgia, serif;
+	font-size: 1em;
+	line-height: 1.2;
+	margin: 1em 0 0.5em 0;
+	padding: 0; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+h1 {
+	font-size: 2.2rem;
 }
 
-.card {
-  padding: 2em;
+h2 {
+	font-size: 2.0rem;
 }
 
-.read-the-docs {
-  color: #888;
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.3rem;
+}
+
+h5 {
+	font-size: 1.1rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+p {
+	margin: 0;
+}
+
+img {
+    display: inline-block;
+    height: auto;
+}
+
+a {
+    font: 14px/1.5em 'Roboto', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    text-align: center;
+}
+
+main#content{
+    width: 800px;
+    display: flex;
+    margin: 1em auto;
+    
+}
+
+.products-all {
+    flex: 0 0 50%;
+    text-align: center;
+}
+.products-all ul li{
+    margin-bottom: 1em;
+}
+
+.checkout{
+    flex: 0 0 50%;
+    text-align: center;
 }

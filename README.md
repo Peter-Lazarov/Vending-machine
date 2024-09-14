@@ -12,9 +12,10 @@
 5. Type node index.js
 6. Now the server should work on http://localhost:3000/products it could be tested with postman and get method
 7. Leave the console to work and go in folder react-part
-8. Open new cmd/console here and type npm install
-9. Type npm run dev
-10. Now the React application should work on http://localhost:5173/
+8. Open new cmd/console
+9. Type npm install
+10. Type npm run dev
+11. Now the React application should work on http://localhost:5173/
 ### Back End - Node.js
 - API server to handle the products requests
 ### Front End - React
