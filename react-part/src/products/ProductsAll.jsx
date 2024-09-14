@@ -1,8 +1,7 @@
-import { useProductsContext } from "./ProductContext"
-
+import { useProductsContext } from "./ProductContext";
 
 export default function ProductsAll() {
-    const { productsAll } = useProductsContext();
+    const { productsAll, addToCheckout } = useProductsContext();
 
     return (
         <>
@@ -16,16 +15,22 @@ export default function ProductsAll() {
                                     <h3>{product.name}</h3>
                                     <p>Price {product.price} lv.</p>
                                     <p>Available {product.quantity}</p>
+                                    <button 
+                                        onClick={() => addToCheckout(product)} 
+                                        disabled={product.quantity === 0}
+                                    >
+                                        {product.quantity === 0 ? "Out of Stock" : "Add to Checkout"}
+                                    </button>
                                 </li>
                             ))}
                         </ul>
                     </>
                 ) : (
                     <div>
-                        <h2>There is no products</h2>
+                        <h2>There are no products</h2>
                     </div>
                 )}
             </div>
         </>
-    )
+    );
 }

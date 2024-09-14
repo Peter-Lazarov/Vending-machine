@@ -1,8 +1,9 @@
 import './App.css'
+import { ProductsProvider } from './products/ProductContext'
 import Header from './core/Header'
 import ProductsAll from './products/ProductsAll'
 import Checkout from './checkout/Checkout'
-import { ProductsProvider } from './products/ProductContext'
+import Payment from './payment/Payment'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <ProductsProvider>
           <ProductsAll />
           <Checkout />
+          <Payment />
         </ProductsProvider>
       </main>
     </>
