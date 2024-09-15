@@ -21,11 +21,11 @@ h6 {
 }
 
 h1 {
-    font-size: 2.2rem; /* Use rem for font sizes */
+    font-size: 2.0rem; /* Use rem for font sizes */
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 h3 {
@@ -51,7 +51,7 @@ p {
 img {
     display: inline-block;
     height: auto;
-    max-width: 100%; /* Make images responsive */
+    max-width: 100%;
 }
 
 a {
@@ -68,8 +68,8 @@ header {
 }
 
 main#content {
-    width: 90%; /* Use percentage for width */
-    max-width: 1000px; /* Set a max-width */
+    width: 90%;
+    max-width: 1000px;
     margin: 1em auto;
 }
 
@@ -77,8 +77,14 @@ main#content {
     display: inline-block;
     width: 48%;
     text-align: center;
+    border: 1px solid rgb(156, 156, 221);
+    border-radius: 1em;
 }
 
+.products-all li.product{
+    margin: 1%;
+    height: 100%;
+}
 
 .checkout {
     display: inline-block;
@@ -113,6 +119,20 @@ main#content {
 .payment button {
     margin: 1%;
     padding: 0.5%;
+}
+
+.bought-products{
+    margin: 0 20% 0 20%;
+    text-align: right;
+    width: 35%;
+}
+
+.coins-nominal{
+    margin: 3% 0 0 0;
+}
+
+.coins-inserted{
+    margin: 3% 0 0 0;
 }
 
 @media (max-width: 768px) {

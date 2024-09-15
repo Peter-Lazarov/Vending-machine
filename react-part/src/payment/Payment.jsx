@@ -88,7 +88,7 @@ export default function Payment() {
         <div className="payment">
             {message != 'You have canceled the order. Here are your inserted coins.' ? (<>
                 <div className="bought-products">
-                    <h2>Selected Products</h2>
+                    <h3>Products</h3>
                     <ul>
                         {selectedProducts.map((product, index) => (
                             <li key={index}>
@@ -96,12 +96,12 @@ export default function Payment() {
                             </li>
                         ))}
                     </ul>
-                    <p>Total Cost: {totalCost} lv.</p>
+                    <p><strong>Total Cost: {totalCost} lv.</strong></p>
                 </div></>) : (<></>)}
             {showPayment ? (
                 <>
-                    <h1>Payment</h1>
                     <div className="coins-nominal">
+                    <h2>Payment</h2>
                         {Object.keys(coinValues).map((coin, index) => (
                             <button key={index} onClick={() => addCoin(coin)}>
                                 Insert {coin}
@@ -113,13 +113,13 @@ export default function Payment() {
                         <button onClick={buyProducts} disabled={!canBuy}>Buy</button>
                     </div>
                     <div className="coins-inserted">
-                        <h2>Inserted Coins</h2>
+                        <h3>Inserted Coins</h3>
                         <ul>
                             {insertedCoins.map((coin, index) => (
                                 <li key={index}>{coin}</li>
                             ))}
                         </ul>
-                        <p>Total Inserted Coins: {totalInsertedCoins} lv.</p>
+                        <p><strong>Total Inserted Coins: {totalInsertedCoins} lv.</strong></p>
                     </div>
                 </>
             ) : (<>

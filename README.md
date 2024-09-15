@@ -16,8 +16,12 @@
 9. Type npm install
 10. Type npm run dev
 11. Now the React application should work on http://localhost:5173/
+
 ### Back End - Node.js
 - API server to handle the products requests
 ### Front End - React
 - React application receiving products from API and rendering the content
 
+#### Additional information
+- Coins denominations used in the application
+10 st, 20 st, 50 st, 1 lv, 2 lv.
