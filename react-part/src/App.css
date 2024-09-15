@@ -79,17 +79,25 @@ main#content {
     text-align: center;
 }
 
-ul li {
-    margin-bottom: 1em;
-    display: inline-block;
-    width: 37%;
-}
 
 .checkout {
     display: inline-block;
     width: 48%;
     text-align: center;
     vertical-align: top;
+}
+
+.products-all ul li,
+.checkout ul li {
+    margin-bottom: 1em;
+    display: inline-block;
+    width: 37%;
+}
+
+.coins-inserted ul li{
+    margin-bottom: 1em;
+    display: inline-block;
+    width: 7%;
 }
 
 .products-all button,

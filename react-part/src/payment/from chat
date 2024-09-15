@@ -1,0 +1,76 @@
+import React, { useState } from 'react';
+
+function Payment({ selectedProducts, totalCost, coinValues, addCoin, resetCoins, buyProducts, canBuy, insertedCoins, totalInsertedCoins, returnedCoins, purchaseMessage }) {
+    const [showReturnedCoins, setShowReturnedCoins] = useState(false);
+    const [delayedReturnedCoins, setDelayedReturnedCoins] = useState([]);
+
+    const handleReset = () => {
+        resetCoins();
+        setShowReturnedCoins(true);
+        setDelayedReturnedCoins([]);
+        returnedCoins.forEach((coin, index) => {
+            setTimeout(() => {
+                setDelayedReturnedCoins(prev => [...prev, coin]);
+            }, index * 200); // Adjust the delay as needed (200ms or 500ms)
+        });
+    };
+
+    const handleReturnToProducts = () => {
+        setShowReturnedCoins(false);
+        setDelayedReturnedCoins([]);
+    };
+
+    return (
+        <div className="payment">
+            {!showReturnedCoins ? (
+                <>
+                    <div className="bought-products">
+                        <h2>Selected Products</h2>
+                        <ul>
+                            {selectedProducts.map((product, index) => (
+                                <li key={index}>
+                                    {product.name} - {product.quantity} x {product.price.toFixed(2)} lv.
+                                </li>
+                            ))}
+                        </ul>
+                        <p>Total Cost: {totalCost.toFixed(2)} lv.</p>
+                    </div>
+                    <h1>Payment</h1>
+                    <div className="coins">
+                        {Object.keys(coinValues).map((coin, index) => (
+                            <button key={index} onClick={() => addCoin(coin)}>
+                                Insert {coin}
+                            </button>
+                        ))}
+                    </div>
+                    <div>
+                        <button onClick={handleReset}>Reset</button>
+                        <button onClick={buyProducts} disabled={!canBuy}>Buy</button>
+                    </div>
+                    <div>
+                        <h2>Inserted Coins</h2>
+                        <ul>
+                            {insertedCoins.map((coin, index) => (
+                                <li key={index}>{coin}</li>
+                            ))}
+                        </ul>
+                        <p>Total Inserted Coins: {totalInsertedCoins.toFixed(2)} lv.</p>
+                    </div>
+                </>
+            ) : (
+                <>
+                    <h2>Returned Coins</h2>
+                    <ul>
+                        {delayedReturnedCoins.map((coin, index) => (
+                            <li key={index}>{coin}</li>
+                        ))}
+                    </ul>
+                    <button onClick={handleReturnToProducts}>Return to Products</button>
+                </>
+            )}
+            {purchaseMessage && <p>{purchaseMessage}</p>}
+        </div>
+    );
+}
+
+export default Payment;

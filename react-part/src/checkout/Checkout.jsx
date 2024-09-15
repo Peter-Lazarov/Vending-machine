@@ -1,7 +1,10 @@
+import { Link, useNavigate } from "react-router-dom";
 import { useProductsContext } from "../products/ProductContext";
 
 export default function Checkout() {
     const { selectedProducts, removeFromCheckout } = useProductsContext();
+
+    const navigate = useNavigate();
 
     // Calculate the total cost
     const totalCost = selectedProducts.reduce((total, product) => {
@@ -25,6 +28,7 @@ export default function Checkout() {
                             ))}
                         </ul>
                         <h3>Total cost: {totalCost} lv.</h3>
+                        <button onClick={() => navigate('/payment')}>continue to Payment</button>
                     </>
                 ) : (
                     <div>
@@ -35,3 +39,4 @@ export default function Checkout() {
         </>
     );
 }
+
