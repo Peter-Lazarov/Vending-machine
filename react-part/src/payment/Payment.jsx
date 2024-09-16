@@ -124,7 +124,7 @@ export default function Payment() {
                 </>
             ) : (<>
                 <div className="coins-returned">
-                    {message && <p>{message}</p>}
+                    {message && <p><strong>{message}</strong></p>}
                     <ul>
                         {delayedReturnedCoins.map((coin, index) => (
                             <li key={index}>{coin}</li>

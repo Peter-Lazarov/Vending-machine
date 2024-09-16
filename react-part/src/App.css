@@ -1,6 +1,7 @@
 html {
     font-family: Helvetica, sans-serif;
-    font-size: 100%; /* Use percentage for base font size */
+    font-size: 100%;
+    /* Use percentage for base font size */
     line-height: 1.5;
     border: none;
 }
@@ -21,7 +22,8 @@ h6 {
 }
 
 h1 {
-    font-size: 2.0rem; /* Use rem for font sizes */
+    font-size: 2.0rem;
+    /* Use rem for font sizes */
 }
 
 h2 {
@@ -55,7 +57,8 @@ img {
 }
 
 a {
-    font-size: 0.875rem; /* Use rem for font sizes */
+    font-size: 0.875rem;
+    /* Use rem for font sizes */
     line-height: 1.5;
 }
 
@@ -77,13 +80,10 @@ main#content {
     display: inline-block;
     width: 48%;
     text-align: center;
-    border: 1px solid rgb(156, 156, 221);
+    border: 1px solid #ffc266;
     border-radius: 1em;
-}
-
-.products-all li.product{
-    margin: 1%;
-    height: 100%;
+    background-color: #ffc266;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.4);
 }
 
 .checkout {
@@ -100,7 +100,7 @@ main#content {
     width: 37%;
 }
 
-.coins-inserted ul li{
+.coins-inserted ul li {
     margin-bottom: 1em;
     display: inline-block;
     width: 7%;
@@ -121,21 +121,41 @@ main#content {
     padding: 0.5%;
 }
 
-.bought-products{
-    margin: 0 20% 0 20%;
+.bought-products {
+    margin: 0 0 0 26%;
+    padding: 1% 19% 2% 0;
     text-align: right;
-    width: 35%;
+    width: 48%;
+    border: 1px solid rgb(130, 195, 255);
+    border-radius: 1em;
+    background-color: rgb(130, 195, 255);
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.4);
 }
 
-.coins-nominal{
+.coins-nominal {
     margin: 3% 0 0 0;
 }
 
-.coins-inserted{
+.coins-inserted {
     margin: 3% 0 0 0;
+    background: #80808029;
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.4);
+}
+
+.coins-returned {
+    margin: 3% 0 0 0;
+    padding: 2% 0% 2% 0;
+    background: #ffffaf;
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.4);
 }
 
 @media (max-width: 768px) {
+    html{
+        font-size: 120%;
+    }
+
     main#content {
         width: 100%;
     }
@@ -145,12 +165,39 @@ main#content {
         width: 100%;
     }
 
-    ul li {
-        /* width: 100%; */
-    }
-
-    .payment button {
+    main#content button {
         margin: 1%;
         padding: 3%;
+        font-size: 82%;
+    }
+
+    div {
+        margin: 3% 2%;
+    }
+
+    .products-all {
+        display: inline-block;
+        width: 96%;
+        text-align: center;
+    }
+
+    .products-all ul li,
+    .checkout ul li {
+        margin-bottom: 1em;
+        width: 45%;
+    }
+
+    .bought-products {
+        margin: 3% auto;
+        width: 86%;
+        padding: 0 28% 0 0;
+    }
+
+    .coins-inserted ul li {
+        width: 12%;
+    }
+
+    .coins-returned{
+        margin: 8% 2%;
     }
 }
